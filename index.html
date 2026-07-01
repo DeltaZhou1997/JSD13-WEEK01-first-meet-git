@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tags Demonstration</title>
+</head>
+<body>
+
+  <header>
+    <h1>HTML Tags Demonstration</h1>
+    <p>A beginner-friendly guide to common HTML elements.</p>
+    <nav>
+      <ul>
+        <li><a href="#text">Text Elements</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#links-images">Links &amp; Images</a></li>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#media">Media</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <article>
+      <h2>Introduction</h2>
+      <p>This page demonstrates commonly used HTML tags in a single document. Each section highlights a category of elements with brief examples.</p>
+    </article>
+
+    <hr>
+
+    <section id="text">
+      <h2>Text Elements</h2>
+
+      <h3>Headings</h3>
+      <p>HTML provides six levels of headings:</p>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+
+      <h3>Paragraphs and Line Breaks</h3>
+      <p>This is a paragraph of text. Paragraphs are wrapped in <code>&lt;p&gt;</code> tags.</p>
+      <p>This is another paragraph.<br>A line break <code>&lt;br&gt;</code> appears above this line.</p>
+
+      <h3>Inline Text Tags</h3>
+      <p><strong>Strong</strong> text uses <code>&lt;strong&gt;</code>.</p>
+      <p><em>Emphasized</em> text uses <code>&lt;em&gt;</code>.</p>
+      <p><small>Small</small> text uses <code>&lt;small&gt;</code>.</p>
+      <p>Inline <code>code</code> uses <code>&lt;code&gt;</code>.</p>
+
+      <h3>Blockquote</h3>
+      <blockquote>
+        <p>This is a blockquote. It is used for quoted content from another source.</p>
+      </blockquote>
+
+      <h3>Preformatted Text</h3>
+      <pre>Line 1: Preformatted text
+Line 2: Preserves spacing
+Line 3:   and indentation</pre>
+    </section>
+
+    <hr>
+
+    <section id="lists">
+      <h2>Lists</h2>
+
+      <h3>Ordered List</h3>
+      <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+      </ol>
+
+      <h3>Unordered List</h3>
+      <ul>
+        <li>Apples</li>
+        <li>Bananas</li>
+        <li>Cherries</li>
+      </ul>
+
+      <h3>Description List</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language — the standard language for creating web pages.</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets — used to style HTML content.</dd>
+      </dl>
+    </section>
+
+    <hr>
+
+    <section id="links-images">
+      <h2>Links and Images</h2>
+
+      <h3>Links</h3>
+      <p>Visit <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Reference</a> for more details.</p>
+
+      <h3>Image with Figure</h3>
+      <figure>
+        <img src="https://via.placeholder.com/400x200" alt="A placeholder image showing a 400 by 200 rectangle">
+        <figcaption>Figure 1: A placeholder image demonstrating the <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> tags.</figcaption>
+      </figure>
+    </section>
+
+    <hr>
+
+    <section id="table">
+      <h2>Table</h2>
+
+      <table>
+        <caption>Programming Language Comparison</caption>
+        <thead>
+          <tr>
+            <th>Language</th>
+            <th>Typing</th>
+            <th>Paradigm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Python</td>
+            <td>Dynamic</td>
+            <td>Multi-paradigm</td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td>Static</td>
+            <td>Object-oriented</td>
+          </tr>
+          <tr>
+            <td>HTML</td>
+            <td>Markup</td>
+            <td>Declarative</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <section id="form">
+      <h2>Form</h2>
+
+      <form>
+        <fieldset>
+          <legend>Contact Information</legend>
+
+          <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+          </p>
+
+          <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+          </p>
+
+          <p>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="40"></textarea>
+          </p>
+
+          <p>
+            <label for="topic">Topic:</label>
+            <select id="topic" name="topic">
+              <option value="">Select a topic</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="js">JavaScript</option>
+            </select>
+          </p>
+
+          <p>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+    <hr>
+
+    <section id="media">
+      <h2>Media</h2>
+
+      <h3>Audio</h3>
+      <audio controls>
+        <source src="sample.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Video</h3>
+      <video controls width="400">
+        <source src="sample.mp4" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+    </section>
+
+    <hr>
+
+    <aside>
+      <h2>Did You Know?</h2>
+      <p>The <code>&lt;aside&gt;</code> tag represents content indirectly related to the main content, such as sidebars or notes.</p>
+    </aside>
+
+  </main>
+
+  <footer>
+    <p><small>&copy; 2026 HTML Tags Demo. Built with semantic HTML only.</small></p>
+  </footer>
+
+</body>
+</html>
