@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+            color: #1a1a2e;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-body {
+            padding: 1.2rem;
+        }
+
+        .card-body h2 {
+            font-size: 1.25rem;
+            color: #1a1a2e;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-body .detail {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 0.3rem;
+        }
+
+        .card-body .detail span {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .artwork-title {
+            font-style: italic;
+            color: #6b21a8;
+            font-size: 0.85rem;
+            margin-top: 0.4rem;
+            padding-top: 0.4rem;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>Famous Artists</h1>
+    <div class="grid" id="cardGrid"></div>
+
+    <script>
+        let ArtistDatabase = [
+            {
+                id: 1,
+                Name: "Vincent Van Gogh",
+                Nationality: "Dutch",
+                FamousArtwork: "https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg?w=1000",
+                ArtworkTitle: "The Starry Night"
+            },
+            {
+                id: 2,
+                Name: "Claude Monet",
+                Nationality: "French",
+                FamousArtwork: "Woman with a Parasol",
+                ArtworkTitle: "https://puzzlemania-154aa.kxcdn.com/products/2024/puzzle-bluebird-1000-pieces-claude-monet-woman-with-a-parasol-madame-monet.webp"
+            },
+            {
+                id: 3,
+                Name: "Pablo Picasso",
+                Nationality: "Spanish",
+                FamousArtwork: "https://upload.wikimedia.org/wikipedia/en/thumb/7/74/PicassoGuernica.jpg/1280px-PicassoGuernica.jpg",
+                ArtworkTitle: "Guernica"
+            },
+            {
+                id: 4,
+                Name: "Salvador Dali",
+                Nationality: "Spanish",
+                FamousArtwork: "https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/The_Persistence_of_Memory.jpg/1280px-The_Persistence_of_Memory.jpg",
+                ArtworkTitle: "The Persistence of Memory"
+            },
+            {
+                id: 5,
+                Name: "Edouard Manet",
+                Nationality: "French",
+                FamousArtwork: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/%C3%89douard_Manet_-_Le_D%C3%A9jeuner_sur_l%27herbe.jpg/960px-%C3%89douard_Manet_-_Le_D%C3%A9jeuner_sur_l%27herbe.jpg",
+                ArtworkTitle: "Le Déjeuner sur l'herbe"
+            }
+        ];
+
+        const grid = document.getElementById('cardGrid');
+
+        ArtistDatabase.forEach(artist => {
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            card.innerHTML = `
+                <img src="${artist.FamousArtwork}" alt="${artist.Name}'s artwork">
+                <div class="card-body">
+                    <h2>${artist.Name}</h2>
+                    <div class="detail"><span>ID:</span> ${artist.id}</div>
+                    <div class="detail"><span>Nationality:</span> ${artist.Nationality}</div>
+                    <div class="artwork-title">Famous Artwork: "${artist.ArtworkTitle}"</div>
+                </div>
+            `;
+
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
